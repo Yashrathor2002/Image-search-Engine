@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stylish Image Gallery — Lightbox Removed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">IG</div>
+          <div>
+            <h1>Stylish Image Gallery</h1>
+            <div class="subtitle">Search photos • Hover for info</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="categories">
+            <button data-cat="Nature">Nature</button>
+            <button data-cat="Technology">Tech</button>
+            <button data-cat="People">People</button>
+            <button data-cat="Food">Food</button>
+            <button data-cat="Animals">Animals</button>
+          </div>
+
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            title="Toggle theme"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 7a5 5 0 100 10 5 5 0 000-10z"
+                stroke="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="search-row">
+        <form id="search-form">
+          <input
+            id="search-box"
+            type="search"
+            placeholder="Search photos (eg. mountains, dogs, city)"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <div id="search-result" class="gallery" aria-live="polite"></div>
+
+      <!-- loader -->
+      <div id="loader" class="loader" style="display: none">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
